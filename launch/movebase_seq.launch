@@ -1,0 +1,14 @@
+<launch>
+    <arg name="num_sides" default="3"/>
+    <arg name="side_length" default=".6"/>
+
+<!-- MoveBaseSeq node launch and Points Sequence ROS Parameters Loading -->
+
+    <!--Run move_base_seqs node-->
+    <node pkg="simple_navigation_goals" type="move_base_seq" name="move_base_seq" output="screen">
+        <param name="num_sides" value="$(arg num_sides)"/>
+        <param name="side_length" value="$(arg side_length)"/>
+
+    </node>
+
+</launch>
